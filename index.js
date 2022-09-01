@@ -5,7 +5,7 @@ const port = process.env.PORT || 8000
 app.get('/', (req, res) => {
   res.json({
     status:200,
-    message:"Welcome Dev"
+    message:"Welcome Pratik Ghelani"
  });
 })
 
@@ -46,6 +46,7 @@ app.get('/user', (req, res) => {
    });
 })
 
+
 app.get('/demo', (req, res) => {
   const data = [{
         demo:"demo"
@@ -54,8 +55,7 @@ app.get('/demo', (req, res) => {
     res.json({
       status:200,
       data
-   });
-   
+   }); 
 })
 
 app.listen(port, () => console.log(`User module listening on port ${port}!`))
