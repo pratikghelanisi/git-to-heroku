@@ -25,4 +25,12 @@ app.get('/user-list', (req, res) => {
         data
      });
 })
+
+app.get('/', (req, res) => {
+    res.json({
+      status:200,
+      message:"Welcome Dev"
+   });
+})
+
 app.listen(port, () => console.log(`User module listening on port ${port}!`))
