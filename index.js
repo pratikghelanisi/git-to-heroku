@@ -1,6 +1,15 @@
 const  express = require('express')
 const app = express()
-const port = 3001
+const port = process.env.PORT || 8000
+
+
+
+app.get('/', (req, res) => {
+  res.json({
+    status:200,
+    message:"Welcome Dev"
+ });
+})
 
 app.get('/user-list', (req, res) => {
     const data = [{
@@ -26,11 +35,5 @@ app.get('/user-list', (req, res) => {
      });
 })
 
-app.get('/', (req, res) => {
-    res.json({
-      status:200,
-      message:"Welcome Dev"
-   });
-})
 
 app.listen(port, () => console.log(`User module listening on port ${port}!`))
