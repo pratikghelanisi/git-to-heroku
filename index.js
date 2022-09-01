@@ -46,4 +46,16 @@ app.get('/user', (req, res) => {
    });
 })
 
+app.get('/demo', (req, res) => {
+  const data = [{
+        demo:"demo"
+      }];
+
+    res.json({
+      status:200,
+      data
+   });
+   
+})
+
 app.listen(port, () => console.log(`User module listening on port ${port}!`))
